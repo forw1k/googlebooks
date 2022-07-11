@@ -1,0 +1,26 @@
+.my-select {
+  display: flex;
+  align-items: center;
+  font-size: 1.6rem;
+  &__name {
+    color: #fff;
+    margin-right: 0.5rem;
+  }
+  &__inner {
+    min-width: 12rem;
+    padding: 0.5rem;
+  }
+}
+@media (max-width: 768px) {
+  .my-select__inner {
+    min-width: unset;
+  }
+}
+@media (max-width: 550px) {
+  .my-select:first-child {
+    margin-bottom: 2rem;
+  }
+  .my-select__name {
+    min-width: 10rem;
+  }
+}
