@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import { observer } from 'mobx-react';
 import store from '../../store/store';
 import MyPreloader from '../MyPreloader/MyPreloader';
+import bookCover from '../../assets/images/book-cover.jpg';
 import './DetailBook.scss';
 
 const DetailBook = observer(() => {
@@ -18,7 +19,7 @@ const DetailBook = observer(() => {
             <img
               src={
                 store.book?.volumeInfo?.imageLinks === undefined
-                  ? '../../assets/images/book-cover.jpg'
+                  ? bookCover
                   : `${store.book?.volumeInfo?.imageLinks?.thumbnail}`
               }
               className="detail-book__pic"

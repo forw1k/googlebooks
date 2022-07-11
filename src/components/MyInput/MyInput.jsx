@@ -1,7 +1,7 @@
 import React from 'react';
 import './MyInput.scss';
 import { observer } from 'mobx-react';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import store from '../../store/store';
 
 const MyInput = observer(({ onChange, value, onClick }) => {
@@ -24,7 +24,7 @@ const MyInput = observer(({ onChange, value, onClick }) => {
         type="text"
       />
       {store.searchQuery.length > 0 ? (
-        <div
+        <Link to="/"
           onClick={onClick}
           role="button"
           tabIndex={0}

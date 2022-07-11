@@ -1,5 +1,6 @@
 import React from 'react';
 import './MyBook.scss';
+import bookCover from '../../assets/images/book-cover.jpg';
 
 function MyBook({ item }) {
   const trimName =
@@ -12,7 +13,7 @@ function MyBook({ item }) {
         <img
           src={
             item?.volumeInfo?.imageLinks === undefined
-              ? '../../assets/images/book-cover.jpg'
+              ? bookCover
               : `${item?.volumeInfo?.imageLinks?.thumbnail}`
           }
           className="book__pic"
