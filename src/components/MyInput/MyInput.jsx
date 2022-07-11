@@ -1,16 +1,14 @@
 import React from 'react';
 import './MyInput.scss';
 import { observer } from 'mobx-react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import store from '../../store/store';
 
 const MyInput = observer(({ onChange, value, onClick }) => {
-  const navigate = useNavigate();
   const handleKeyDown = (e) => {
     if (store.searchQuery.length > 0) {
       if (e.key === 'Enter') {
         store.reqData();
-        navigate('/result');
       }
     }
   };
